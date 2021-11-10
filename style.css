@@ -7,9 +7,7 @@
   scroll-behavior: smooth;
 }
 body {
-  /* background: #f1f8fc; */
-  background: rgb(15, 5, 70);
-  /* background: #192e3a; */
+  background: rgb(0, 0, 0);
 }
 body::before {
   content: "";
@@ -20,8 +18,7 @@ body::before {
   width: 100%;
   height: 100%;
   background: linear-gradient(#4cf162, #3fadf1);
-  /* background: linear-gradient(#3db0f7, #d74efa); */
-  background: linear-gradient(#ffeb3b, #e91e63);
+  background: linear-gradient(#ef5b8b, #e91e63);
   clip-path: circle(30% at right 70%);
 }
 body::after {
@@ -32,9 +29,7 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(#30d3e9, #6a1dce);
-  /* background: linear-gradient(#4cf162, #3fadf1); */
-  /* background: linear-gradient(#4cf162, #3fadf1); */
+  background: linear-gradient(#567bfd, #6a1dce);
   clip-path: circle(20% at 10% 10%);
 }
 
@@ -58,6 +53,22 @@ header .logo {
   text-decoration: none;
   font-size: 3em;
   z-index: 100;
+}
+.contentBx h3 {
+  color: #fff;
+  /* color: rgb(0, 0, 0); */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 64px;
+  text-align: center;
+  margin: 20px 0 10px;
+  line-height: 6px;
+}
+.contentBx h3 span {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: initial;
 }
 
 header {
@@ -185,7 +196,7 @@ header ul li:nth-child(7):hover ~ #marker::before {
   width: calc(100% - 50px);
   min-height: calc(100vh - 280px);
   min-height: 300px;
-  background: rgba(81, 162, 255, 0.103);
+  background: rgba(255, 255, 255, 0.253);
   backdrop-filter: blur(10px);
   box-shadow: 0 15px 35px rgba(250, 92, 92, 0.05);
   border-radius: 20px;
@@ -232,7 +243,7 @@ header ul li:nth-child(7):hover ~ #marker::before {
 .home .image img {
   max-width: 600px;
   height: 550px;
-  /* animation: animate 5s linear infinite; */
+  animation: animate 5s linear infinite;
 }
 @keyframes animate {
   0%,
@@ -243,7 +254,7 @@ header ul li:nth-child(7):hover ~ #marker::before {
     transform: translateY(100px);
   }
 }
-.home .social {
+.home .container .social {
   position: absolute;
   right: -25px;
   display: flex;
@@ -251,10 +262,10 @@ header ul li:nth-child(7):hover ~ #marker::before {
   align-items: center;
   flex-direction: column;
 }
-.home .social li {
+.home .container .social li {
   list-style: none;
 }
-.home .social li a {
+.home .container .social li a {
   text-decoration: none;
   width: 50px;
   height: 50px;
@@ -266,14 +277,31 @@ header ul li:nth-child(7):hover ~ #marker::before {
   margin: 5px 0;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-.home .social li a img {
+.home .container .social li a img {
   transform: scale(0.6);
   transition: 0.5s;
 }
-.home .social li:hover a img {
+.home .container .social li:hover a img {
   transform: scale(0.6) rotate(360deg);
 }
 @media (max-width: 991px) {
+  .contentBx h3 {
+    color: #fff;
+    /* color: rgb(0, 0, 0); */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 50px;
+    text-align: center;
+    margin: 20px 0 10px;
+    line-height: 6px;
+  }
+  .contentBx h3 span {
+    display: none;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: initial;
+  }
   .home {
     padding: 10px;
     padding-top: 70px;
@@ -342,7 +370,7 @@ header ul li:nth-child(7):hover ~ #marker::before {
   font-weight: 300;
 }
 .about p {
-  color: #474747;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 24px;
   transition: 0.5s;
 }
@@ -364,7 +392,7 @@ header ul li:nth-child(7):hover ~ #marker::before {
   /* transform: translateY(-20px); */
 }
 .about .row:hover p {
-  color: rgb(22, 22, 22);
+  color: rgba(255, 255, 255);
 }
 .about .row .col50 .imgBx img {
   position: absolute;
@@ -433,7 +461,7 @@ header ul li:nth-child(7):hover ~ #marker::before {
 .features .container .card {
   position: relative;
   height: 250px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.15);
   display: flex;
   width: 45%;
   margin: 30px 0;
@@ -467,7 +495,7 @@ header ul li:nth-child(7):hover ~ #marker::before {
 }
 .features .container .card .imageBx img {
   max-width: 100px;
-  /* filter: invert(1); */
+  filter: invert(1);
   transition: 0.5s ease-in-out;
 }
 .features .container .card:hover .imageBx img {
@@ -628,171 +656,7 @@ header ul li:nth-child(7):hover ~ #marker::before {
     grid-column: span 1;
   }
 }
-/* ============================================================================ */
-/* =================================== PRIECES ================================= */
-/* 
-.card{
-    position: relative;
-    width: 508px;
-    height: 314px;
-    transform-style: preserve-3d;
-    perspective: 500px;
-}
-.card .face{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    transform-style: preserve-3d;
-    transition: 1s;
-    backface-visibility: hidden;
-}
-.card:hover .face.front{
-    transform: rotateY(180deg);
-}
-.card .face.back{
-    transform: rotateY(180deg);
-}
-.card:hover .face.back{
-    transform: rotateY(360deg);  
-}
-.card .face.front::before{
-    content: '';
-    position: absolute;
-    bottom: 40px;
-    right: 40px;
-    width: 60px;
-    height: 60px;
-    background: #fff;
-    border-radius: 50%;
-    opacity: 0.5;
-}
-.card .face.front::after{
-    content: '';
-    position: absolute;
-    bottom: 40px;
-    right: 80px;
-    width: 60px;
-    height: 60px;
-    background: #fff;
-    border-radius: 50%;
-    opacity: 0.7;
-}
-.card .face.front .debit{
-    position: absolute;
-    left: 40px;
-    top: 30px;
-    color: #fff;
-    font-weight: 500;
-}
-.card .face.front .bank{
-    position: absolute;
-    right: 40px;
-    top: 25px;
-    color: #fff;
-    font-weight: 500;
-    font-style: italic;
-    font-size: 24px;
-}
-.card .face.front .chip{
-    position: absolute;
-    top: 80px;
-    left: 50px;
-    max-width: 64px;
-}
-.card .face.front .number{
-    position: absolute;
-    bottom: 130px;
-    left: 40px;
-    color: #fff;
-    font-weight: 500;
-    letter-spacing: 6px;
-    font-size: 18px;
-    text-shadow: 0 2px 1px #0005;
-    font-family: 'Orbitron', sans-serif;
-}
-.card .face.front .valid{
-    position: absolute;
-    bottom: 90px;
-    left: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-weight: 300;
-    line-height: 1em;
-    text-align: right;
-}
-.card .face.front .valid span:last-child{
-    margin-left: 20px;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 2px;
-}
-.card .face.front .cardHolder{
-    position: absolute;
-    bottom: 40px;
-    left: 40px;
-    color: #fff;
-    font-weight: 300;
-    font-size: 16px;
-    letter-spacing: 2px;
-}
-.card .face.back .blackbar{
-    position: absolute;
-    top: 40px;
-    width: 100%;
-    height: 60px;
-    background: #000;
-}
-.card .face.back .ccvtext{
-    position: absolute;
-    top: 120px;
-    left: 30px;
-}
-.card .face.back .ccvtext h5{
-    color: #fff;
-    font-weight: 400;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-.card .face.back .ccvtext .whiteBar{
-    position: relative;
-    width: 400px;
-    height: 40px;
-    background: #fff;
-    margin-top: 5px;
-}
-.card .face.back .ccvtext .ccv{
-    position: relative;
-    top: -35px;
-    left: 395px;
-    background: #ccc;
-    color: #111;
-    width: 50px;
-    height: 30px;
-    font-weight: 600;
-    letter-spacing: 3px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.card .face.back .text{
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-    right: 30px;
-    color: #fff;
-    font-size: 10px;
-    line-height: 1.4em;
-    font-weight: 300;
-} */
+
 /* ============================================================================ */
 /* =================================== PLANES =================================== */
 .plans {
@@ -830,7 +694,7 @@ header ul li:nth-child(7):hover ~ #marker::before {
   height: 100%;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(10px);
   transform-style: preserve-3d;
   transition: 1s;
@@ -857,8 +721,8 @@ header ul li:nth-child(7):hover ~ #marker::before {
   position: relative;
 
   /* filter: invert(1); */
-  width: 170px;
-  height: 170px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   overflow: hidden;
   border: 10px solid rgba(0, 0, 0, 0.25);
@@ -966,7 +830,7 @@ header ul li:nth-child(7):hover ~ #marker::before {
   position: relative;
   width: 300px;
   height: 400px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.25);
   /* background: rgba(33, 149, 243, 0.103); */
   margin: 20px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
@@ -1006,8 +870,8 @@ header ul li:nth-child(7):hover ~ #marker::before {
   object-fit: cover;
 }
 .team .container .card .content .contentBx h3 {
-  /* color: #fff; */
-  color: rgb(0, 0, 0);
+  color: #fff;
+  /* color: rgb(0, 0, 0); */
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 500;
@@ -1039,7 +903,7 @@ header ul li:nth-child(7):hover ~ #marker::before {
   opacity: 1;
 }
 .team .container .card .sci li a {
-  color: rgb(0, 0, 0);
+  color: #fff;
   font-size: 24px;
 }
 
@@ -1130,25 +994,7 @@ header ul li:nth-child(7):hover ~ #marker::before {
   align-items: center;
   width: 100%;
 }
-/* .contact::before{
-    content: '';
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    background: linear-gradient(#ffeb3b, #e91e63);
-    border-radius: 50%;
-    transform: translate(-420px,-180px);
-}
 
-.contact::after{
-    content: '';
-    position: absolute;
-    width: 350px;
-    height: 350px;
-    background: linear-gradient(#2196f3, #83d8ff);
-    border-radius: 50%;
-    transform: translate(400px,180px);
-} */
 .contact .container {
   position: relative;
   z-index: 1000;
@@ -1178,8 +1024,8 @@ header ul li:nth-child(7):hover ~ #marker::before {
 .contact .container h2 {
   width: 100%;
   text-align: center;
-  /* color: #fff; */
-  color: rgb(0, 0, 0);
+  color: #fff;
+  /* color: rgb(0, 0, 0); */
   font-size: 36px;
   margin-bottom: 20px;
 }
@@ -1199,8 +1045,8 @@ header ul li:nth-child(7):hover ~ #marker::before {
   position: relative;
   width: 100%;
   height: 40px;
-  /* color: #fff; */
-  color: rgb(0, 0, 0);
+  color: #fff;
+  /* color: rgb(0, 0, 0); */
 }
 .contact .container .row100 .col .inputBox input,
 .contact .container .row100 .col .inputBox textarea {
@@ -1357,7 +1203,7 @@ footer p {
 footer .container .sec.aboutus .social {
   position: absolute;
   left: 100px;
-  top: 180px;
+  top: 210px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1388,24 +1234,7 @@ footer .container .sec.aboutus .social li:hover a img {
 footer .container .sec.aboutus .sci li {
   list-style: none;
 }
-/* footer .container .sec.aboutus .sci li a{
-    color: #fff;
-    font-size: 30px;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background: rgb(4, 164, 212);
-    backdrop-filter: blur(20px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;
-    text-decoration: none;
-    border-radius: 4px;
-}
-footer .container .sec.aboutus .sci li a:hover{
-    background: #ee8127;
-} */
+
 .quickLinks {
   position: relative;
   width: 25%;
