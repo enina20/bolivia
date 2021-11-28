@@ -54,19 +54,19 @@ header .logo {
   font-size: 3em;
   z-index: 100;
 }
-.contentBx h3 {
+.contentBx h4 {
   color: #fff;
   /* color: rgb(0, 0, 0); */
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 700;
-  font-size: 64px;
+  font-size: 40px;
   text-align: center;
   margin: 20px 0 10px;
   line-height: 6px;
 }
-.contentBx h3 span {
-  font-size: 16px;
+.contentBx h4 span {
+  font-size: 24px;
   font-weight: 500;
   text-transform: initial;
 }
@@ -336,7 +336,8 @@ header ul li:nth-child(7):hover ~ #marker::before {
 /* =================================================================================== */
 /* ====================================== ABOUT ====================================== */
 .about {
-  padding: 50px 120px 0px 120px;
+  /* padding: 0px 12px 10px 12px; */
+  padding-bottom: 100px;
 }
 
 .about .row {
@@ -1367,4 +1368,58 @@ footer .container .sec.aboutus .sci li {
     left: 30px;
     top: 190px;
   }
+}
+
+.desafios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  /* background: #bedfe8; */
+}
+.accordion {
+  max-width: 1200px;
+}
+.accordion .contentBxA {
+  position: relative;
+  margin: 10px 20px;
+}
+
+.accordion .contentBxA .label {
+  position: relative;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  cursor: pointer;
+}
+
+.accordion .contentBxA .label::before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+}
+
+.accordion .contentBxA.active .label::before {
+  content: "-";
+}
+
+.accordion .contentBxA .contentA {
+  position: relative;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  overflow-y: auto;
+}
+
+.accordion .contentBxA.active .contentA {
+  height: 100vh;
+  padding: 10px;
 }
