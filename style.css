@@ -217,16 +217,17 @@ header ul li:nth-child(7):hover ~ #marker::before {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   padding: 40px;
-  padding-left: 100px;
+  /* padding-left: 100px; */
 }
 .home .content h2 {
-  font-size: 3em;
+  font-size: 2.2em;
   color: #fff;
   /* color: #000000c7; */
 }
 .home .content p {
   font-size: 1.2em;
   color: #fff;
+  text-align: justify;
 }
 .home .content a {
   display: inline-block;
@@ -243,7 +244,7 @@ header ul li:nth-child(7):hover ~ #marker::before {
 .home .image img {
   max-width: 600px;
   height: 550px;
-  animation: animate 5s linear infinite;
+  /* animation: animate 5s linear infinite; */
 }
 @keyframes animate {
   0%,
@@ -355,14 +356,15 @@ header ul li:nth-child(7):hover ~ #marker::before {
 }
 .about .row .col502 {
   border-radius: 20px 0 0 20px;
-  max-width: 400px;
+  max-width: 600px;
   box-shadow: 0 15px 30px rgba(74, 3, 88, 0.295);
   /* background: rgba(115, 3, 243, 0.13); */
   background: linear-gradient(#39ddf37c, #18a2f879);
   border: 1px solid rgba(22, 25, 70, 0.096);
   backdrop-filter: blur(20px);
   padding: 40px;
-  padding-left: 100px;
+  /* padding-left: 100px; */
+  text-align: justify;
 }
 .about .titleText {
   text-align: center;
