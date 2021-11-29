@@ -208,25 +208,12 @@
         })
 
 
-        window.addEventListener('scroll', (e) => {
-            const scroll = document.querySelector('.scrollTop');
-            scroll.classList.toggle("active", window.scrollY > 500);
-        });
+        const accordion = document.getElementsByClassName('contentBxA');
 
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            })
-        }
-
-        function toggleMenu() {
-            const menuToggle = document.querySelector('.menuToggle');
-            const navigation = document.querySelector('.navigation');
-
-
-            menuToggle.classList.toggle('active')
-            navigation.classList.toggle('active')
+        for( i = 0; i<accordion.length; i++){
+            accordion[i].addEventListener('click', function(){
+                this.classList.toggle('active')
+            });
         }
     </script>
 </body>
