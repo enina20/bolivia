@@ -1390,6 +1390,8 @@ footer .container .sec.aboutus .sci li {
 }
 
 .accordion .contentBxA .label {
+  border-radius: 20px;
+  padding: 10px;
   position: relative;
   text-align: center;
   background: rgba(255, 255, 255, 0.25);
