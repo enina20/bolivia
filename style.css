@@ -366,6 +366,18 @@ header ul li:nth-child(7):hover ~ #marker::before {
   /* padding-left: 100px; */
   text-align: justify;
 }
+.about .row .col502 a {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #fff;
+  color: rgb(36, 56, 170);
+  margin-top: 20px;
+  border-radius: 30px;
+  font-size: 1.2em;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
 .about .titleText {
   text-align: center;
   color: #fff;
